@@ -64,8 +64,8 @@ Partial Class BookSearchForm
         Me.Tbl_staffTableAdapter = New ProjectManagement.project_jobDataSetTableAdapters.tbl_staffTableAdapter()
         Me.Book_idTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Return_dateDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Button2 = New System.Windows.Forms.Button()
         Staff_codeLabel = New System.Windows.Forms.Label()
         Start_dateLabel = New System.Windows.Forms.Label()
         Book_idLabel = New System.Windows.Forms.Label()
@@ -134,7 +134,6 @@ Partial Class BookSearchForm
         Me.Tbl_isbn_bookBindingNavigator.Size = New System.Drawing.Size(538, 25)
         Me.Tbl_isbn_bookBindingNavigator.TabIndex = 0
         Me.Tbl_isbn_bookBindingNavigator.Text = "BindingNavigator1"
-        Me.Tbl_isbn_bookBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -245,7 +244,7 @@ Partial Class BookSearchForm
         Me.Tbl_isbn_bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Tbl_isbn_bookDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.bookid, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.Tbl_isbn_bookDataGridView.DataSource = Me.Tbl_isbn_bookBindingSource
-        Me.Tbl_isbn_bookDataGridView.Location = New System.Drawing.Point(10, 40)
+        Me.Tbl_isbn_bookDataGridView.Location = New System.Drawing.Point(9, 65)
         Me.Tbl_isbn_bookDataGridView.Name = "Tbl_isbn_bookDataGridView"
         Me.Tbl_isbn_bookDataGridView.RowTemplate.Height = 21
         Me.Tbl_isbn_bookDataGridView.Size = New System.Drawing.Size(516, 118)
@@ -286,7 +285,7 @@ Partial Class BookSearchForm
         'FillBy1ToolStrip
         '
         Me.FillBy1ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FilternameToolStripLabel, Me.FilternameToolStripTextBox, Me.FillBy1ToolStripButton})
-        Me.FillBy1ToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.FillBy1ToolStrip.Location = New System.Drawing.Point(0, 25)
         Me.FillBy1ToolStrip.Name = "FillBy1ToolStrip"
         Me.FillBy1ToolStrip.Size = New System.Drawing.Size(538, 25)
         Me.FillBy1ToolStrip.TabIndex = 2
@@ -312,7 +311,7 @@ Partial Class BookSearchForm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(228, 56)
+        Me.Button1.Location = New System.Drawing.Point(310, 56)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(62, 29)
         Me.Button1.TabIndex = 15
@@ -324,7 +323,7 @@ Partial Class BookSearchForm
         Me.Staff_codeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_lendingBindingSource, "staff_code", True))
         Me.Staff_codeTextBox.Location = New System.Drawing.Point(69, 41)
         Me.Staff_codeTextBox.Name = "Staff_codeTextBox"
-        Me.Staff_codeTextBox.Size = New System.Drawing.Size(100, 19)
+        Me.Staff_codeTextBox.Size = New System.Drawing.Size(134, 19)
         Me.Staff_codeTextBox.TabIndex = 20
         '
         'Tbl_lendingBindingSource
@@ -391,19 +390,10 @@ Partial Class BookSearchForm
         Me.Panel1.Controls.Add(Me.Staff_codeTextBox)
         Me.Panel1.Controls.Add(Start_dateLabel)
         Me.Panel1.Controls.Add(Me.Start_dateDateTimePicker)
-        Me.Panel1.Location = New System.Drawing.Point(12, 174)
+        Me.Panel1.Location = New System.Drawing.Point(12, 204)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(514, 177)
+        Me.Panel1.Size = New System.Drawing.Size(484, 147)
         Me.Panel1.TabIndex = 24
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(228, 91)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(62, 29)
-        Me.Button2.TabIndex = 34
-        Me.Button2.Text = "返却"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Return_dateDateTimePicker
         '
@@ -412,6 +402,15 @@ Partial Class BookSearchForm
         Me.Return_dateDateTimePicker.Name = "Return_dateDateTimePicker"
         Me.Return_dateDateTimePicker.Size = New System.Drawing.Size(129, 19)
         Me.Return_dateDateTimePicker.TabIndex = 33
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(310, 88)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(62, 29)
+        Me.Button2.TabIndex = 34
+        Me.Button2.Text = "返却"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'BookSearchForm
         '

@@ -73,12 +73,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.Designer.vb">
-      <DependentUpon>Book.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Book.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="BookLending.Designer.vb">
       <DependentUpon>BookLending.vb</DependentUpon>
     </Compile>
@@ -163,9 +157,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Book.resx">
-      <DependentUpon>Book.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BookLending.resx">
       <DependentUpon>BookLending.vb</DependentUpon>
     </EmbeddedResource>
