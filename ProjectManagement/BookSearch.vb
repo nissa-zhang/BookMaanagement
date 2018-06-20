@@ -47,6 +47,29 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+        Dim bookOut = False
+        Using connection As New SqlClient.SqlConnection(
+            My.Settings.project_jobConnectionString)
+            Using command As SqlClient.SqlCommand = connection.CreateCommand()
+                connection.Open()
+                command.CommandText =
+                    "SELECT * FROM tbl_lending WHERE book_id=" & Book_idTextBox.Text
+                Dim reader = command.ExecuteReader()
+                If reader.Read() Then
+                    ' Check if return_date is null
+                    If reader.IsDBNull(4) Then
+                        bookOut = True
+                    End If
+                End If
+                connection.Close()
+            End Using
+        End Using
+
+        If bookOut Then
+            MsgBox("Book is already out, sorry")
+            Return
+        End If
+
         Using connection As New SqlClient.SqlConnection(
             My.Settings.project_jobConnectionString)
             Using command As SqlClient.SqlCommand = connection.CreateCommand()
@@ -76,7 +99,7 @@
 
                 command.CommandText =
                 "UPDATE tbl_lending SET return_date =Format(GETDATE(),'yyyy/MM/dd')
-                WHERE book_id= " & Me.Book_idTextBox.Text & ""
+                WHERE book_id= " & Me.Book_idTextBox.Text
                 command.ExecuteNonQuery()
                 MsgBox("返却を成功しました")
                 connection.Close()

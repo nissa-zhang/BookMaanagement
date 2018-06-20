@@ -256,6 +256,7 @@ Partial Class BookManagementForm
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_isbn_bookBindingSource, "id", True))
+        Me.IdTextBox.Enabled = False
         Me.IdTextBox.Location = New System.Drawing.Point(237, 96)
         Me.IdTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.IdTextBox.Name = "IdTextBox"
