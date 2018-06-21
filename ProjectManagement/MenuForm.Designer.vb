@@ -27,8 +27,8 @@ Partial Class MenuForm
         Me.LendButton = New System.Windows.Forms.Button()
         Me.ReturnButton = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.SectionButton = New System.Windows.Forms.Button()
         Me.StaffButton = New System.Windows.Forms.Button()
+        Me.BookmasterButton = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ExportButton = New System.Windows.Forms.Button()
         Me.QuitButton = New System.Windows.Forms.Button()
@@ -82,21 +82,11 @@ Partial Class MenuForm
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Panel2.Controls.Add(Me.StaffButton)
-        Me.Panel2.Controls.Add(Me.SectionButton)
+        Me.Panel2.Controls.Add(Me.BookmasterButton)
         Me.Panel2.Location = New System.Drawing.Point(176, 73)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(130, 203)
         Me.Panel2.TabIndex = 2
-        '
-        'SectionButton
-        '
-        Me.SectionButton.Font = New System.Drawing.Font("MS UI Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.SectionButton.Location = New System.Drawing.Point(6, 21)
-        Me.SectionButton.Name = "SectionButton"
-        Me.SectionButton.Size = New System.Drawing.Size(120, 47)
-        Me.SectionButton.TabIndex = 3
-        Me.SectionButton.Text = "書籍マスター"
-        Me.SectionButton.UseVisualStyleBackColor = True
         '
         'StaffButton
         '
@@ -107,6 +97,16 @@ Partial Class MenuForm
         Me.StaffButton.TabIndex = 1
         Me.StaffButton.Text = "スタッフマスター"
         Me.StaffButton.UseVisualStyleBackColor = True
+        '
+        'BookmasterButton
+        '
+        Me.BookmasterButton.Font = New System.Drawing.Font("MS UI Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BookmasterButton.Location = New System.Drawing.Point(6, 21)
+        Me.BookmasterButton.Name = "BookmasterButton"
+        Me.BookmasterButton.Size = New System.Drawing.Size(120, 47)
+        Me.BookmasterButton.TabIndex = 3
+        Me.BookmasterButton.Text = "書籍マスター"
+        Me.BookmasterButton.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -160,7 +160,7 @@ Partial Class MenuForm
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents SectionButton As Button
+    Friend WithEvents BookmasterButton As Button
     Friend WithEvents StaffButton As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents ExportButton As Button

@@ -176,4 +176,8 @@
         'このフォームを閉じる
         Me.Close()
     End Sub
+
+    Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
+
+    End Sub
 End Class

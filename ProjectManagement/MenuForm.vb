@@ -25,7 +25,6 @@
     End Sub
 
     Dim frm_cs As CustomerForm
-
     Private Sub CustomerButton_Click(sender As Object, e As EventArgs)
         Me.Cursor = Cursors.WaitCursor
 
@@ -63,6 +62,18 @@
         End If
 
         frm_lending.ShowDialog()
+
+        Me.Cursor = Cursors.Default
+    End Sub
+    Dim frm_bm As BookManagementForm
+    Private Sub BookmasterButton_Click(sender As Object, e As EventArgs) Handles BookmasterButton.Click
+        Me.Cursor = Cursors.WaitCursor
+
+        If frm_bm Is Nothing OrElse frm_bm.IsDisposed() Then
+            frm_bm = New BookManagementForm()
+        End If
+
+        frm_bm.ShowDialog()
 
         Me.Cursor = Cursors.Default
     End Sub

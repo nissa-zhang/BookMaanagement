@@ -65,13 +65,13 @@ Partial Class ProjectForm
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.Tbl_jobBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_jobDataGridView = New System.Windows.Forms.DataGridView()
-        Me.TblstaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProjectjobDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.staff_code = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.TblstaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ProjectjobDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Project_codeLabel = New System.Windows.Forms.Label()
         Project_nameLabel = New System.Windows.Forms.Label()
         Customer_codeLabel = New System.Windows.Forms.Label()
@@ -264,8 +264,11 @@ Partial Class ProjectForm
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tbl_categoryTableAdapter = Nothing
         Me.TableAdapterManager.tbl_customerTableAdapter = Me.Tbl_customerTableAdapter
+        Me.TableAdapterManager.tbl_isbn_bookTableAdapter = Nothing
         Me.TableAdapterManager.tbl_jobTableAdapter = Me.Tbl_jobTableAdapter
+        Me.TableAdapterManager.tbl_lendingTableAdapter = Nothing
         Me.TableAdapterManager.tbl_projectTableAdapter = Me.Tbl_projectTableAdapter
         Me.TableAdapterManager.tbl_sectionTableAdapter = Nothing
         Me.TableAdapterManager.tbl_staffTableAdapter = Me.Tbl_staffTableAdapter
@@ -442,16 +445,6 @@ Partial Class ProjectForm
         Me.Tbl_jobDataGridView.Size = New System.Drawing.Size(458, 145)
         Me.Tbl_jobDataGridView.TabIndex = 7
         '
-        'TblstaffBindingSource
-        '
-        Me.TblstaffBindingSource.DataMember = "tbl_staff"
-        Me.TblstaffBindingSource.DataSource = Me.Project_jobDataSet
-        '
-        'ProjectjobDataSetBindingSource
-        '
-        Me.ProjectjobDataSetBindingSource.DataSource = Me.Project_jobDataSet
-        Me.ProjectjobDataSetBindingSource.Position = 0
-        '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "job_number"
@@ -490,6 +483,11 @@ Partial Class ProjectForm
         Me.staff_code.ValueMember = "staff_code"
         Me.staff_code.Width = 80
         '
+        'TblstaffBindingSource
+        '
+        Me.TblstaffBindingSource.DataMember = "tbl_staff"
+        Me.TblstaffBindingSource.DataSource = Me.Project_jobDataSet
+        '
         'DataGridViewCheckBoxColumn1
         '
         Me.DataGridViewCheckBoxColumn1.DataPropertyName = "complete_flag"
@@ -497,6 +495,11 @@ Partial Class ProjectForm
         Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
         Me.DataGridViewCheckBoxColumn1.ReadOnly = True
         Me.DataGridViewCheckBoxColumn1.Width = 40
+        '
+        'ProjectjobDataSetBindingSource
+        '
+        Me.ProjectjobDataSetBindingSource.DataSource = Me.Project_jobDataSet
+        Me.ProjectjobDataSetBindingSource.Position = 0
         '
         'ProjectForm
         '

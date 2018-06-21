@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class BookSearchForm
     Inherits System.Windows.Forms.Form
 
     'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class BookSearchForm
     'メモ: 以下のプロシージャは Windows フォーム デザイナーで必要です。
     'Windows フォーム デザイナーを使用して変更できます。  
     'コード エディターを使って変更しないでください。
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Staff_codeLabel As System.Windows.Forms.Label
@@ -49,10 +49,6 @@ Partial Class BookSearchForm
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FillBy1ToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.FilternameToolStripLabel = New System.Windows.Forms.ToolStripLabel()
-        Me.FilternameToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.FillBy1ToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Staff_codeTextBox = New System.Windows.Forms.TextBox()
         Me.Tbl_lendingBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -64,8 +60,12 @@ Partial Class BookSearchForm
         Me.Tbl_staffTableAdapter = New ProjectManagement.project_jobDataSetTableAdapters.tbl_staffTableAdapter()
         Me.Book_idTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Return_dateDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Return_dateDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.FillByToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.FilternameToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.FilternameToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
         Staff_codeLabel = New System.Windows.Forms.Label()
         Start_dateLabel = New System.Windows.Forms.Label()
         Book_idLabel = New System.Windows.Forms.Label()
@@ -75,10 +75,10 @@ Partial Class BookSearchForm
         CType(Me.Tbl_isbn_bookBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Project_jobDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_isbn_bookDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.FillBy1ToolStrip.SuspendLayout()
         CType(Me.Tbl_lendingBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_staffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.FillByToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'Staff_codeLabel
@@ -131,7 +131,7 @@ Partial Class BookSearchForm
         Me.Tbl_isbn_bookBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Tbl_isbn_bookBindingNavigator.Name = "Tbl_isbn_bookBindingNavigator"
         Me.Tbl_isbn_bookBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Tbl_isbn_bookBindingNavigator.Size = New System.Drawing.Size(538, 25)
+        Me.Tbl_isbn_bookBindingNavigator.Size = New System.Drawing.Size(545, 25)
         Me.Tbl_isbn_bookBindingNavigator.TabIndex = 0
         Me.Tbl_isbn_bookBindingNavigator.Text = "BindingNavigator1"
         '
@@ -282,33 +282,6 @@ Partial Class BookSearchForm
         Me.DataGridViewTextBoxColumn5.HeaderText = "author"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
-        'FillBy1ToolStrip
-        '
-        Me.FillBy1ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FilternameToolStripLabel, Me.FilternameToolStripTextBox, Me.FillBy1ToolStripButton})
-        Me.FillBy1ToolStrip.Location = New System.Drawing.Point(0, 25)
-        Me.FillBy1ToolStrip.Name = "FillBy1ToolStrip"
-        Me.FillBy1ToolStrip.Size = New System.Drawing.Size(538, 25)
-        Me.FillBy1ToolStrip.TabIndex = 2
-        Me.FillBy1ToolStrip.Text = "FillBy1ToolStrip"
-        '
-        'FilternameToolStripLabel
-        '
-        Me.FilternameToolStripLabel.Name = "FilternameToolStripLabel"
-        Me.FilternameToolStripLabel.Size = New System.Drawing.Size(46, 22)
-        Me.FilternameToolStripLabel.Text = "書籍名:"
-        '
-        'FilternameToolStripTextBox
-        '
-        Me.FilternameToolStripTextBox.Name = "FilternameToolStripTextBox"
-        Me.FilternameToolStripTextBox.Size = New System.Drawing.Size(100, 25)
-        '
-        'FillBy1ToolStripButton
-        '
-        Me.FillBy1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.FillBy1ToolStripButton.Name = "FillBy1ToolStripButton"
-        Me.FillBy1ToolStripButton.Size = New System.Drawing.Size(77, 22)
-        Me.FillBy1ToolStripButton.Text = "フィルター実行"
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(310, 56)
@@ -395,14 +368,6 @@ Partial Class BookSearchForm
         Me.Panel1.Size = New System.Drawing.Size(484, 147)
         Me.Panel1.TabIndex = 24
         '
-        'Return_dateDateTimePicker
-        '
-        Me.Return_dateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Tbl_lendingBindingSource, "return_date", True))
-        Me.Return_dateDateTimePicker.Location = New System.Drawing.Point(69, 98)
-        Me.Return_dateDateTimePicker.Name = "Return_dateDateTimePicker"
-        Me.Return_dateDateTimePicker.Size = New System.Drawing.Size(129, 19)
-        Me.Return_dateDateTimePicker.TabIndex = 33
-        '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(310, 88)
@@ -412,13 +377,48 @@ Partial Class BookSearchForm
         Me.Button2.Text = "返却"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Return_dateDateTimePicker
+        '
+        Me.Return_dateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Tbl_lendingBindingSource, "return_date", True))
+        Me.Return_dateDateTimePicker.Location = New System.Drawing.Point(69, 98)
+        Me.Return_dateDateTimePicker.Name = "Return_dateDateTimePicker"
+        Me.Return_dateDateTimePicker.Size = New System.Drawing.Size(129, 19)
+        Me.Return_dateDateTimePicker.TabIndex = 33
+        '
+        'FillByToolStrip
+        '
+        Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FilternameToolStripLabel, Me.FilternameToolStripTextBox, Me.FillByToolStripButton})
+        Me.FillByToolStrip.Location = New System.Drawing.Point(0, 25)
+        Me.FillByToolStrip.Name = "FillByToolStrip"
+        Me.FillByToolStrip.Size = New System.Drawing.Size(545, 25)
+        Me.FillByToolStrip.TabIndex = 25
+        Me.FillByToolStrip.Text = "FillByToolStrip"
+        '
+        'FilternameToolStripLabel
+        '
+        Me.FilternameToolStripLabel.Name = "FilternameToolStripLabel"
+        Me.FilternameToolStripLabel.Size = New System.Drawing.Size(63, 22)
+        Me.FilternameToolStripLabel.Text = "filtername:"
+        '
+        'FilternameToolStripTextBox
+        '
+        Me.FilternameToolStripTextBox.Name = "FilternameToolStripTextBox"
+        Me.FilternameToolStripTextBox.Size = New System.Drawing.Size(100, 23)
+        '
+        'FillByToolStripButton
+        '
+        Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillByToolStripButton.Name = "FillByToolStripButton"
+        Me.FillByToolStripButton.Size = New System.Drawing.Size(39, 19)
+        Me.FillByToolStripButton.Text = "FillBy"
+        '
         'BookSearchForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(538, 390)
+        Me.ClientSize = New System.Drawing.Size(545, 390)
+        Me.Controls.Add(Me.FillByToolStrip)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.FillBy1ToolStrip)
         Me.Controls.Add(Me.Tbl_isbn_bookDataGridView)
         Me.Controls.Add(Me.Tbl_isbn_bookBindingNavigator)
         Me.Name = "BookSearchForm"
@@ -429,12 +429,12 @@ Partial Class BookSearchForm
         CType(Me.Tbl_isbn_bookBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Project_jobDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_isbn_bookDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.FillBy1ToolStrip.ResumeLayout(False)
-        Me.FillBy1ToolStrip.PerformLayout()
         CType(Me.Tbl_lendingBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_staffBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.FillByToolStrip.ResumeLayout(False)
+        Me.FillByToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -458,10 +458,6 @@ Partial Class BookSearchForm
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents Tbl_isbn_bookBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents Tbl_isbn_bookDataGridView As DataGridView
-    Friend WithEvents FillBy1ToolStrip As ToolStrip
-    Friend WithEvents FilternameToolStripLabel As ToolStripLabel
-    Friend WithEvents FilternameToolStripTextBox As ToolStripTextBox
-    Friend WithEvents FillBy1ToolStripButton As ToolStripButton
     Friend WithEvents Tbl_lendingBindingSource As BindingSource
     Friend WithEvents Tbl_lendingTableAdapter As project_jobDataSetTableAdapters.tbl_lendingTableAdapter
     Friend WithEvents Tbl_staffBindingSource As BindingSource
@@ -478,4 +474,8 @@ Partial Class BookSearchForm
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Return_dateDateTimePicker As DateTimePicker
     Friend WithEvents Button2 As Button
+    Friend WithEvents FillByToolStrip As ToolStrip
+    Friend WithEvents FilternameToolStripLabel As ToolStripLabel
+    Friend WithEvents FilternameToolStripTextBox As ToolStripTextBox
+    Friend WithEvents FillByToolStripButton As ToolStripButton
 End Class
