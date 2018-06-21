@@ -44,11 +44,6 @@ Partial Class BookSearchForm
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Tbl_isbn_bookBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Tbl_isbn_bookDataGridView = New System.Windows.Forms.DataGridView()
-        Me.bookid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Staff_codeTextBox = New System.Windows.Forms.TextBox()
         Me.Tbl_lendingBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -66,6 +61,11 @@ Partial Class BookSearchForm
         Me.FilternameToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.FilternameToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.bookid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Staff_codeLabel = New System.Windows.Forms.Label()
         Start_dateLabel = New System.Windows.Forms.Label()
         Book_idLabel = New System.Windows.Forms.Label()
@@ -84,38 +84,42 @@ Partial Class BookSearchForm
         'Staff_codeLabel
         '
         Staff_codeLabel.AutoSize = True
-        Staff_codeLabel.Location = New System.Drawing.Point(0, 44)
+        Staff_codeLabel.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Staff_codeLabel.Location = New System.Drawing.Point(40, 44)
         Staff_codeLabel.Name = "Staff_codeLabel"
-        Staff_codeLabel.Size = New System.Drawing.Size(59, 12)
+        Staff_codeLabel.Size = New System.Drawing.Size(78, 12)
         Staff_codeLabel.TabIndex = 19
-        Staff_codeLabel.Text = "staff code:"
+        Staff_codeLabel.Text = "スタッフコード："
         '
         'Start_dateLabel
         '
         Start_dateLabel.AutoSize = True
-        Start_dateLabel.Location = New System.Drawing.Point(0, 71)
+        Start_dateLabel.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Start_dateLabel.Location = New System.Drawing.Point(40, 71)
         Start_dateLabel.Name = "Start_dateLabel"
-        Start_dateLabel.Size = New System.Drawing.Size(57, 12)
+        Start_dateLabel.Size = New System.Drawing.Size(51, 12)
         Start_dateLabel.TabIndex = 21
-        Start_dateLabel.Text = "start date:"
+        Start_dateLabel.Text = "貸出日："
         '
         'Book_idLabel
         '
         Book_idLabel.AutoSize = True
-        Book_idLabel.Location = New System.Drawing.Point(13, 19)
+        Book_idLabel.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Book_idLabel.Location = New System.Drawing.Point(40, 19)
         Book_idLabel.Name = "Book_idLabel"
-        Book_idLabel.Size = New System.Drawing.Size(44, 12)
+        Book_idLabel.Size = New System.Drawing.Size(68, 12)
         Book_idLabel.TabIndex = 22
-        Book_idLabel.Text = "book id:"
+        Book_idLabel.Text = "書籍コード："
         '
         'Return_dateLabel
         '
         Return_dateLabel.AutoSize = True
-        Return_dateLabel.Location = New System.Drawing.Point(0, 102)
+        Return_dateLabel.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Return_dateLabel.Location = New System.Drawing.Point(40, 102)
         Return_dateLabel.Name = "Return_dateLabel"
-        Return_dateLabel.Size = New System.Drawing.Size(63, 12)
+        Return_dateLabel.Size = New System.Drawing.Size(51, 12)
         Return_dateLabel.TabIndex = 32
-        Return_dateLabel.Text = "return date:"
+        Return_dateLabel.Text = "返却日："
         '
         'Tbl_isbn_bookBindingNavigator
         '
@@ -131,7 +135,7 @@ Partial Class BookSearchForm
         Me.Tbl_isbn_bookBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Tbl_isbn_bookBindingNavigator.Name = "Tbl_isbn_bookBindingNavigator"
         Me.Tbl_isbn_bookBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Tbl_isbn_bookBindingNavigator.Size = New System.Drawing.Size(545, 25)
+        Me.Tbl_isbn_bookBindingNavigator.Size = New System.Drawing.Size(580, 25)
         Me.Tbl_isbn_bookBindingNavigator.TabIndex = 0
         Me.Tbl_isbn_bookBindingNavigator.Text = "BindingNavigator1"
         '
@@ -244,59 +248,30 @@ Partial Class BookSearchForm
         Me.Tbl_isbn_bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Tbl_isbn_bookDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.bookid, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.Tbl_isbn_bookDataGridView.DataSource = Me.Tbl_isbn_bookBindingSource
-        Me.Tbl_isbn_bookDataGridView.Location = New System.Drawing.Point(9, 65)
+        Me.Tbl_isbn_bookDataGridView.Location = New System.Drawing.Point(12, 53)
         Me.Tbl_isbn_bookDataGridView.Name = "Tbl_isbn_bookDataGridView"
         Me.Tbl_isbn_bookDataGridView.RowTemplate.Height = 21
-        Me.Tbl_isbn_bookDataGridView.Size = New System.Drawing.Size(516, 118)
+        Me.Tbl_isbn_bookDataGridView.Size = New System.Drawing.Size(556, 134)
         Me.Tbl_isbn_bookDataGridView.TabIndex = 1
-        '
-        'bookid
-        '
-        Me.bookid.DataPropertyName = "id"
-        Me.bookid.HeaderText = "書籍コード"
-        Me.bookid.Name = "bookid"
-        Me.bookid.ReadOnly = True
-        Me.bookid.Width = 80
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "isbn"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "isbn"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "category_id"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "category_id"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "title"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "title"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "author"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "author"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(310, 56)
+        Me.Button1.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Button1.Font = New System.Drawing.Font("MS UI Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button1.Location = New System.Drawing.Point(350, 44)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(62, 29)
+        Me.Button1.Size = New System.Drawing.Size(65, 33)
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "貸出"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Staff_codeTextBox
         '
         Me.Staff_codeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_lendingBindingSource, "staff_code", True))
-        Me.Staff_codeTextBox.Location = New System.Drawing.Point(69, 41)
+        Me.Staff_codeTextBox.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Staff_codeTextBox.Location = New System.Drawing.Point(127, 41)
         Me.Staff_codeTextBox.Name = "Staff_codeTextBox"
-        Me.Staff_codeTextBox.Size = New System.Drawing.Size(134, 19)
+        Me.Staff_codeTextBox.Size = New System.Drawing.Size(100, 19)
         Me.Staff_codeTextBox.TabIndex = 20
         '
         'Tbl_lendingBindingSource
@@ -307,7 +282,8 @@ Partial Class BookSearchForm
         'Start_dateDateTimePicker
         '
         Me.Start_dateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Tbl_lendingBindingSource, "start_date", True))
-        Me.Start_dateDateTimePicker.Location = New System.Drawing.Point(69, 66)
+        Me.Start_dateDateTimePicker.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Start_dateDateTimePicker.Location = New System.Drawing.Point(127, 69)
         Me.Start_dateDateTimePicker.Name = "Start_dateDateTimePicker"
         Me.Start_dateDateTimePicker.Size = New System.Drawing.Size(134, 19)
         Me.Start_dateDateTimePicker.TabIndex = 22
@@ -345,7 +321,8 @@ Partial Class BookSearchForm
         'Book_idTextBox
         '
         Me.Book_idTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_lendingBindingSource, "book_id", True))
-        Me.Book_idTextBox.Location = New System.Drawing.Point(69, 16)
+        Me.Book_idTextBox.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Book_idTextBox.Location = New System.Drawing.Point(127, 16)
         Me.Book_idTextBox.Name = "Book_idTextBox"
         Me.Book_idTextBox.Size = New System.Drawing.Size(100, 19)
         Me.Book_idTextBox.TabIndex = 23
@@ -363,16 +340,18 @@ Partial Class BookSearchForm
         Me.Panel1.Controls.Add(Me.Staff_codeTextBox)
         Me.Panel1.Controls.Add(Start_dateLabel)
         Me.Panel1.Controls.Add(Me.Start_dateDateTimePicker)
+        Me.Panel1.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Panel1.Location = New System.Drawing.Point(12, 204)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(484, 147)
+        Me.Panel1.Size = New System.Drawing.Size(556, 147)
         Me.Panel1.TabIndex = 24
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(310, 88)
+        Me.Button2.Font = New System.Drawing.Font("MS UI Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button2.Location = New System.Drawing.Point(350, 83)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(62, 29)
+        Me.Button2.Size = New System.Drawing.Size(65, 31)
         Me.Button2.TabIndex = 34
         Me.Button2.Text = "返却"
         Me.Button2.UseVisualStyleBackColor = True
@@ -380,9 +359,10 @@ Partial Class BookSearchForm
         'Return_dateDateTimePicker
         '
         Me.Return_dateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Tbl_lendingBindingSource, "return_date", True))
-        Me.Return_dateDateTimePicker.Location = New System.Drawing.Point(69, 98)
+        Me.Return_dateDateTimePicker.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Return_dateDateTimePicker.Location = New System.Drawing.Point(127, 98)
         Me.Return_dateDateTimePicker.Name = "Return_dateDateTimePicker"
-        Me.Return_dateDateTimePicker.Size = New System.Drawing.Size(129, 19)
+        Me.Return_dateDateTimePicker.Size = New System.Drawing.Size(134, 19)
         Me.Return_dateDateTimePicker.TabIndex = 33
         '
         'FillByToolStrip
@@ -390,39 +370,72 @@ Partial Class BookSearchForm
         Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FilternameToolStripLabel, Me.FilternameToolStripTextBox, Me.FillByToolStripButton})
         Me.FillByToolStrip.Location = New System.Drawing.Point(0, 25)
         Me.FillByToolStrip.Name = "FillByToolStrip"
-        Me.FillByToolStrip.Size = New System.Drawing.Size(545, 25)
+        Me.FillByToolStrip.Size = New System.Drawing.Size(580, 25)
         Me.FillByToolStrip.TabIndex = 25
         Me.FillByToolStrip.Text = "FillByToolStrip"
         '
         'FilternameToolStripLabel
         '
         Me.FilternameToolStripLabel.Name = "FilternameToolStripLabel"
-        Me.FilternameToolStripLabel.Size = New System.Drawing.Size(63, 22)
-        Me.FilternameToolStripLabel.Text = "filtername:"
+        Me.FilternameToolStripLabel.Size = New System.Drawing.Size(55, 22)
+        Me.FilternameToolStripLabel.Text = "書籍名："
         '
         'FilternameToolStripTextBox
         '
         Me.FilternameToolStripTextBox.Name = "FilternameToolStripTextBox"
-        Me.FilternameToolStripTextBox.Size = New System.Drawing.Size(100, 23)
+        Me.FilternameToolStripTextBox.Size = New System.Drawing.Size(100, 25)
         '
         'FillByToolStripButton
         '
         Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.FillByToolStripButton.Name = "FillByToolStripButton"
-        Me.FillByToolStripButton.Size = New System.Drawing.Size(39, 19)
-        Me.FillByToolStripButton.Text = "FillBy"
+        Me.FillByToolStripButton.Size = New System.Drawing.Size(77, 22)
+        Me.FillByToolStripButton.Text = "フィルター実行"
+        '
+        'bookid
+        '
+        Me.bookid.DataPropertyName = "id"
+        Me.bookid.HeaderText = "書籍コード"
+        Me.bookid.Name = "bookid"
+        Me.bookid.ReadOnly = True
+        Me.bookid.Width = 80
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "isbn"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "ISBN"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "category_id"
+        Me.DataGridViewTextBoxColumn3.HeaderText = " カテゴリーID"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "title"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "書籍名"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 120
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "author"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "作者"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'BookSearchForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(545, 390)
+        Me.ClientSize = New System.Drawing.Size(580, 390)
         Me.Controls.Add(Me.FillByToolStrip)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Tbl_isbn_bookDataGridView)
         Me.Controls.Add(Me.Tbl_isbn_bookBindingNavigator)
         Me.Name = "BookSearchForm"
-        Me.Text = "BookSearch"
+        Me.Text = "書籍貸出・返却"
         CType(Me.Tbl_isbn_bookBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tbl_isbn_bookBindingNavigator.ResumeLayout(False)
         Me.Tbl_isbn_bookBindingNavigator.PerformLayout()
@@ -465,11 +478,6 @@ Partial Class BookSearchForm
     Friend WithEvents Button1 As Button
     Friend WithEvents Staff_codeTextBox As TextBox
     Friend WithEvents Start_dateDateTimePicker As DateTimePicker
-    Friend WithEvents bookid As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents Book_idTextBox As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Return_dateDateTimePicker As DateTimePicker
@@ -478,4 +486,9 @@ Partial Class BookSearchForm
     Friend WithEvents FilternameToolStripLabel As ToolStripLabel
     Friend WithEvents FilternameToolStripTextBox As ToolStripTextBox
     Friend WithEvents FillByToolStripButton As ToolStripButton
+    Friend WithEvents bookid As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
 End Class
