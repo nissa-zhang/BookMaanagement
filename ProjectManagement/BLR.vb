@@ -14,7 +14,7 @@
 
     End Sub
 
-    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorDeleteItem.Click
+    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) 
 
 
 

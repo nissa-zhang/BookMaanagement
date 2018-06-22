@@ -718,7 +718,7 @@ SELECT id, name FROM tbl_category WHERE (id = @id)</CommandText>
               <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name FROM dbo.vw_BLR</CommandText>
+                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email, ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -732,53 +732,115 @@ SELECT id, name FROM tbl_category WHERE (id = @id)</CommandText>
               <Mapping SourceColumn="return_date" DataSetColumn="return_date" />
               <Mapping SourceColumn="title" DataSetColumn="title" />
               <Mapping SourceColumn="staff_name" DataSetColumn="staff_name" />
+              <Mapping SourceColumn="staff_kana" DataSetColumn="staff_kana" />
+              <Mapping SourceColumn="staff_sex" DataSetColumn="staff_sex" />
+              <Mapping SourceColumn="staff_section" DataSetColumn="staff_section" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="ext_phone" DataSetColumn="ext_phone" />
+              <Mapping SourceColumn="reminder_flag" DataSetColumn="reminder_flag" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByN" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByN" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByN">
+              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByN" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByN" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByN">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name FROM dbo.vw_BLR WHERE return_date=NULL</CommandText>
+                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email, ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHERE (return_date = NULL)</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByN1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByN1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByN1">
+              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByN1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByN1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByN1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name FROM dbo.vw_BLR WHERE return_date LIKE @filtername</CommandText>
+                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email, ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHERE (return_date LIKE @filtername)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="filtername" ColumnName="return_date" DataSourceName="project_job.dbo.vw_BLR" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@filtername" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="return_date" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByn2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByn2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillByn2">
+              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByn2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByn2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByn2">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name FROM dbo.vw_BLR where return_date is null</CommandText>
+                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email, ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHERE (return_date IS NULL)</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByName">
+              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name FROM dbo.vw_BLR　WHERE  staff_name LIKE @filtername</CommandText>
+                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email, ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHERE (staff_name LIKE @filtername)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="filtername" ColumnName="staff_name" DataSourceName="project_job.dbo.vw_BLR" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@filtername" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="staff_name" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByNULL" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByNULL" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByNULL">
+              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByNULL" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByNULL" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillByNULL">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name FROM dbo.vw_BLR WHERE return_date is null</CommandText>
+                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email, ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHERE (return_date IS NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.vw_BLR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fillnore" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fillnore" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="Fillnore">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email, ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHERE return_date is null</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_reminderTableAdapter" GeneratorDataComponentClassName="tbl_reminderTableAdapter" Name="tbl_reminder" UserDataComponentName="tbl_reminderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="project_jobConnectionString (MySettings)" DbObjectName="project_job.dbo.tbl_reminder" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[tbl_reminder] WHERE (([staff_code] = @Original_staff_code) AND ([reminder_flag] = @Original_reminder_flag))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_staff_code" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="staff_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_reminder_flag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="reminder_flag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[tbl_reminder] ([staff_code], [reminder_flag]) VALUES (@staff_code, @reminder_flag);
+SELECT staff_code, reminder_flag FROM tbl_reminder WHERE (staff_code = @staff_code)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@staff_code" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="staff_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@reminder_flag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="reminder_flag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT staff_code, reminder_flag FROM dbo.tbl_reminder</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[tbl_reminder] SET [staff_code] = @staff_code, [reminder_flag] = @reminder_flag WHERE (([staff_code] = @Original_staff_code) AND ([reminder_flag] = @Original_reminder_flag));
+SELECT staff_code, reminder_flag FROM tbl_reminder WHERE (staff_code = @staff_code)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@staff_code" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="staff_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@reminder_flag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="reminder_flag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_staff_code" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="staff_code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_reminder_flag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="reminder_flag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="staff_code" DataSetColumn="staff_code" />
+              <Mapping SourceColumn="reminder_flag" DataSetColumn="reminder_flag" />
+            </Mappings>
+            <Sources />
           </TableAdapter>
         </Tables>
         <Sources />
@@ -1131,6 +1193,50 @@ SELECT id, name FROM tbl_category WHERE (id = @id)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="staff_kana" msprop:Generator_ColumnVarNameInTable="columnstaff_kana" msprop:Generator_ColumnPropNameInRow="staff_kana" msprop:Generator_ColumnPropNameInTable="staff_kanaColumn" msprop:Generator_UserColumnName="staff_kana" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="staff_sex" msprop:Generator_ColumnVarNameInTable="columnstaff_sex" msprop:Generator_ColumnPropNameInRow="staff_sex" msprop:Generator_ColumnPropNameInTable="staff_sexColumn" msprop:Generator_UserColumnName="staff_sex" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="staff_section" msprop:Generator_ColumnVarNameInTable="columnstaff_section" msprop:Generator_ColumnPropNameInRow="staff_section" msprop:Generator_ColumnPropNameInTable="staff_sectionColumn" msprop:Generator_UserColumnName="staff_section" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ext_phone" msprop:Generator_ColumnVarNameInTable="columnext_phone" msprop:Generator_ColumnPropNameInRow="ext_phone" msprop:Generator_ColumnPropNameInTable="ext_phoneColumn" msprop:Generator_UserColumnName="ext_phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="reminder_flag" msprop:Generator_ColumnVarNameInTable="columnreminder_flag" msprop:Generator_ColumnPropNameInRow="reminder_flag" msprop:Generator_ColumnPropNameInTable="reminder_flagColumn" msprop:Generator_UserColumnName="reminder_flag" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_reminder" msprop:Generator_TableClassName="tbl_reminderDataTable" msprop:Generator_TableVarName="tabletbl_reminder" msprop:Generator_TablePropName="tbl_reminder" msprop:Generator_RowDeletingName="tbl_reminderRowDeleting" msprop:Generator_RowChangingName="tbl_reminderRowChanging" msprop:Generator_RowEvHandlerName="tbl_reminderRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_reminderRowDeleted" msprop:Generator_UserTableName="tbl_reminder" msprop:Generator_RowChangedName="tbl_reminderRowChanged" msprop:Generator_RowEvArgName="tbl_reminderRowChangeEvent" msprop:Generator_RowClassName="tbl_reminderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="staff_code" msprop:Generator_ColumnVarNameInTable="columnstaff_code" msprop:Generator_ColumnPropNameInRow="staff_code" msprop:Generator_ColumnPropNameInTable="staff_codeColumn" msprop:Generator_UserColumnName="staff_code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="reminder_flag" msprop:Generator_ColumnVarNameInTable="columnreminder_flag" msprop:Generator_ColumnPropNameInRow="reminder_flag" msprop:Generator_ColumnPropNameInTable="reminder_flagColumn" msprop:Generator_UserColumnName="reminder_flag" type="xs:boolean" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1176,6 +1282,10 @@ SELECT id, name FROM tbl_category WHERE (id = @id)</CommandText>
     <xs:unique name="vw_BLR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:vw_BLR" />
       <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="tbl_reminder_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_reminder" />
+      <xs:field xpath="mstns:staff_code" />
     </xs:unique>
   </xs:element>
 </xs:schema>
