@@ -27,7 +27,9 @@ Partial Class BookManagementForm
         Dim TitleLabel As System.Windows.Forms.Label
         Dim AuthorLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookManagementForm))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim StatflgLabel As System.Windows.Forms.Label
+        Dim Label2 As System.Windows.Forms.Label
         Me.Tbl_isbn_bookBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.Tbl_isbn_bookBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -57,6 +59,11 @@ Partial Class BookManagementForm
         Me.BiToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.FillBybiToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.Tbl_isbn_bookDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tbl_isbn_bookTableAdapter = New ProjectManagement.project_jobDataSetTableAdapters.tbl_isbn_bookTableAdapter()
         Me.TableAdapterManager = New ProjectManagement.project_jobDataSetTableAdapters.TableAdapterManager()
         Me.Tbl_categoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -66,14 +73,12 @@ Partial Class BookManagementForm
         Me.FilternameToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StatflgTextBox = New System.Windows.Forms.TextBox()
         IsbnLabel = New System.Windows.Forms.Label()
         TitleLabel = New System.Windows.Forms.Label()
         AuthorLabel = New System.Windows.Forms.Label()
+        StatflgLabel = New System.Windows.Forms.Label()
+        Label2 = New System.Windows.Forms.Label()
         CType(Me.Tbl_isbn_bookBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tbl_isbn_bookBindingNavigator.SuspendLayout()
         CType(Me.Tbl_isbn_bookBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,17 +94,17 @@ Partial Class BookManagementForm
         '
         IsbnLabel.AutoSize = True
         IsbnLabel.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        IsbnLabel.Location = New System.Drawing.Point(65, 250)
+        IsbnLabel.Location = New System.Drawing.Point(66, 268)
         IsbnLabel.Name = "IsbnLabel"
-        IsbnLabel.Size = New System.Drawing.Size(42, 12)
+        IsbnLabel.Size = New System.Drawing.Size(38, 12)
         IsbnLabel.TabIndex = 3
-        IsbnLabel.Text = "ISBN："
+        IsbnLabel.Text = "ISBN:"
         '
         'TitleLabel
         '
         TitleLabel.AutoSize = True
         TitleLabel.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        TitleLabel.Location = New System.Drawing.Point(64, 308)
+        TitleLabel.Location = New System.Drawing.Point(65, 328)
         TitleLabel.Name = "TitleLabel"
         TitleLabel.Size = New System.Drawing.Size(51, 12)
         TitleLabel.TabIndex = 7
@@ -109,7 +114,7 @@ Partial Class BookManagementForm
         '
         AuthorLabel.AutoSize = True
         AuthorLabel.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        AuthorLabel.Location = New System.Drawing.Point(65, 336)
+        AuthorLabel.Location = New System.Drawing.Point(66, 356)
         AuthorLabel.Name = "AuthorLabel"
         AuthorLabel.Size = New System.Drawing.Size(38, 12)
         AuthorLabel.TabIndex = 9
@@ -239,7 +244,7 @@ Partial Class BookManagementForm
         'IsbnTextBox
         '
         Me.IsbnTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_isbn_bookBindingSource, "isbn", True))
-        Me.IsbnTextBox.Location = New System.Drawing.Point(140, 247)
+        Me.IsbnTextBox.Location = New System.Drawing.Point(141, 265)
         Me.IsbnTextBox.Name = "IsbnTextBox"
         Me.IsbnTextBox.Size = New System.Drawing.Size(100, 19)
         Me.IsbnTextBox.TabIndex = 4
@@ -247,7 +252,7 @@ Partial Class BookManagementForm
         'TitleTextBox
         '
         Me.TitleTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_isbn_bookBindingSource, "title", True))
-        Me.TitleTextBox.Location = New System.Drawing.Point(140, 305)
+        Me.TitleTextBox.Location = New System.Drawing.Point(141, 325)
         Me.TitleTextBox.Name = "TitleTextBox"
         Me.TitleTextBox.Size = New System.Drawing.Size(100, 19)
         Me.TitleTextBox.TabIndex = 8
@@ -255,7 +260,7 @@ Partial Class BookManagementForm
         'AuthorTextBox
         '
         Me.AuthorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_isbn_bookBindingSource, "author", True))
-        Me.AuthorTextBox.Location = New System.Drawing.Point(140, 333)
+        Me.AuthorTextBox.Location = New System.Drawing.Point(141, 353)
         Me.AuthorTextBox.Name = "AuthorTextBox"
         Me.AuthorTextBox.Size = New System.Drawing.Size(100, 19)
         Me.AuthorTextBox.TabIndex = 10
@@ -263,7 +268,7 @@ Partial Class BookManagementForm
         'Category_idTextBox
         '
         Me.Category_idTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_isbn_bookBindingSource, "category_id", True))
-        Me.Category_idTextBox.Location = New System.Drawing.Point(140, 276)
+        Me.Category_idTextBox.Location = New System.Drawing.Point(141, 294)
         Me.Category_idTextBox.Name = "Category_idTextBox"
         Me.Category_idTextBox.Size = New System.Drawing.Size(100, 19)
         Me.Category_idTextBox.TabIndex = 6
@@ -272,7 +277,7 @@ Partial Class BookManagementForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(59, 279)
+        Me.Label1.Location = New System.Drawing.Point(60, 297)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(75, 12)
         Me.Label1.TabIndex = 14
@@ -342,9 +347,45 @@ Partial Class BookManagementForm
         Me.Tbl_isbn_bookDataGridView.DataSource = Me.Tbl_isbn_bookBindingSource
         Me.Tbl_isbn_bookDataGridView.Location = New System.Drawing.Point(15, 53)
         Me.Tbl_isbn_bookDataGridView.Name = "Tbl_isbn_bookDataGridView"
+        Me.Tbl_isbn_bookDataGridView.ReadOnly = True
         Me.Tbl_isbn_bookDataGridView.RowTemplate.Height = 21
         Me.Tbl_isbn_bookDataGridView.Size = New System.Drawing.Size(577, 167)
         Me.Tbl_isbn_bookDataGridView.TabIndex = 16
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "書籍コード"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "isbn"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "ISBN"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "category_id"
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("MS UI Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridViewTextBoxColumn3.HeaderText = " カテゴリーID"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "title"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "書籍名"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 120
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "author"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "作者"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'Tbl_isbn_bookTableAdapter
         '
@@ -402,52 +443,48 @@ Partial Class BookManagementForm
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_isbn_bookBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(140, 218)
+        Me.IdTextBox.Location = New System.Drawing.Point(141, 236)
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.ReadOnly = True
         Me.IdTextBox.Size = New System.Drawing.Size(100, 19)
         Me.IdTextBox.TabIndex = 2
-        Me.IdTextBox.Visible = False
         '
-        'DataGridViewTextBoxColumn1
+        'StatflgLabel
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "書籍コード"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        StatflgLabel.AutoSize = True
+        StatflgLabel.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        StatflgLabel.Location = New System.Drawing.Point(66, 382)
+        StatflgLabel.Name = "StatflgLabel"
+        StatflgLabel.Size = New System.Drawing.Size(48, 12)
+        StatflgLabel.TabIndex = 17
+        StatflgLabel.Text = "statflg:"
         '
-        'DataGridViewTextBoxColumn2
+        'StatflgTextBox
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "isbn"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "ISBN"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.StatflgTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_isbn_bookBindingSource, "statflg", True))
+        Me.StatflgTextBox.Location = New System.Drawing.Point(141, 382)
+        Me.StatflgTextBox.Name = "StatflgTextBox"
+        Me.StatflgTextBox.Size = New System.Drawing.Size(100, 19)
+        Me.StatflgTextBox.TabIndex = 18
         '
-        'DataGridViewTextBoxColumn3
+        'Label2
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "category_id"
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("MS UI Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridViewTextBoxColumn3.HeaderText = " カテゴリーID"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "title"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "書籍名"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 120
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "author"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "作者"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Label2.AutoSize = True
+        Label2.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Label2.Location = New System.Drawing.Point(66, 241)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(68, 12)
+        Label2.TabIndex = 19
+        Label2.Text = "書籍コード："
         '
         'BookManagementForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(612, 391)
+        Me.ClientSize = New System.Drawing.Size(612, 411)
+        Me.Controls.Add(Label2)
+        Me.Controls.Add(StatflgLabel)
+        Me.Controls.Add(Me.StatflgTextBox)
         Me.Controls.Add(Me.FillByToolStrip)
         Me.Controls.Add(Me.Tbl_isbn_bookDataGridView)
         Me.Controls.Add(Me.FillBy1ToolStrip)
@@ -525,4 +562,5 @@ Partial Class BookManagementForm
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents StatflgTextBox As TextBox
 End Class

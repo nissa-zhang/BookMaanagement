@@ -77,4 +77,17 @@
 
         Me.Cursor = Cursors.Default
     End Sub
+
+    Dim frm_bl As BLR
+    Private Sub ExportButton_Click(sender As Object, e As EventArgs) Handles ExportButton.Click
+        Me.Cursor = Cursors.WaitCursor
+
+        If frm_bl Is Nothing OrElse frm_bl.IsDisposed() Then
+            frm_bl = New BLR()
+        End If
+
+        frm_bl.ShowDialog()
+
+        Me.Cursor = Cursors.Default
+    End Sub
 End Class

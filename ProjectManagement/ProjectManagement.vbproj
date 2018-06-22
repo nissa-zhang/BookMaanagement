@@ -46,6 +46,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -72,10 +75,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookLendingrecord.Designer.vb">
-      <DependentUpon>BookLendingrecord.vb</DependentUpon>
+    <Compile Include="BLR.Designer.vb">
+      <DependentUpon>BLR.vb</DependentUpon>
     </Compile>
-    <Compile Include="BookLendingrecord.vb">
+    <Compile Include="BLR.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookManagementForm.Designer.vb">
@@ -132,10 +135,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>project_jobDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="project_jobDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>project_jobDataSet1.xsd</DependentUpon>
+    <Compile Include="project_jobDataSet.vb">
+      <DependentUpon>project_jobDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="StaffForm.vb">
       <SubType>Form</SubType>
@@ -161,8 +162,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BookLendingrecord.resx">
-      <DependentUpon>BookLendingrecord.vb</DependentUpon>
+    <EmbeddedResource Include="BLR.resx">
+      <DependentUpon>BLR.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookManagementForm.resx">
       <DependentUpon>BookManagementForm.vb</DependentUpon>
@@ -199,6 +200,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -219,17 +221,6 @@
     </None>
     <None Include="project_jobDataSet.xss">
       <DependentUpon>project_jobDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="project_jobDataSet1.xsc">
-      <DependentUpon>project_jobDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="project_jobDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>project_jobDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="project_jobDataSet1.xss">
-      <DependentUpon>project_jobDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

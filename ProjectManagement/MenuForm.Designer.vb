@@ -27,10 +27,10 @@ Partial Class MenuForm
         Me.LendButton = New System.Windows.Forms.Button()
         Me.ReturnButton = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.StaffButton = New System.Windows.Forms.Button()
         Me.BookmasterButton = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ExportButton = New System.Windows.Forms.Button()
+        Me.StaffButton = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.QuitButton = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -88,16 +88,6 @@ Partial Class MenuForm
         Me.Panel2.Size = New System.Drawing.Size(137, 169)
         Me.Panel2.TabIndex = 2
         '
-        'StaffButton
-        '
-        Me.StaffButton.Font = New System.Drawing.Font("MS UI Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.StaffButton.Location = New System.Drawing.Point(5, 13)
-        Me.StaffButton.Name = "StaffButton"
-        Me.StaffButton.Size = New System.Drawing.Size(126, 61)
-        Me.StaffButton.TabIndex = 1
-        Me.StaffButton.Text = "スタッフマスター"
-        Me.StaffButton.UseVisualStyleBackColor = True
-        '
         'BookmasterButton
         '
         Me.BookmasterButton.Font = New System.Drawing.Font("MS UI Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
@@ -108,15 +98,6 @@ Partial Class MenuForm
         Me.BookmasterButton.Text = "書籍マスター"
         Me.BookmasterButton.UseVisualStyleBackColor = True
         '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.StaffButton)
-        Me.Panel3.Location = New System.Drawing.Point(312, 75)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(134, 169)
-        Me.Panel3.TabIndex = 3
-        '
         'ExportButton
         '
         Me.ExportButton.Font = New System.Drawing.Font("MS UI Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
@@ -126,6 +107,25 @@ Partial Class MenuForm
         Me.ExportButton.TabIndex = 4
         Me.ExportButton.Text = "書籍貸出・返却の記録"
         Me.ExportButton.UseVisualStyleBackColor = True
+        '
+        'StaffButton
+        '
+        Me.StaffButton.Font = New System.Drawing.Font("MS UI Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.StaffButton.Location = New System.Drawing.Point(5, 13)
+        Me.StaffButton.Name = "StaffButton"
+        Me.StaffButton.Size = New System.Drawing.Size(126, 61)
+        Me.StaffButton.TabIndex = 1
+        Me.StaffButton.Text = "スタッフマスター"
+        Me.StaffButton.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.StaffButton)
+        Me.Panel3.Location = New System.Drawing.Point(312, 75)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(134, 169)
+        Me.Panel3.TabIndex = 3
         '
         'QuitButton
         '
