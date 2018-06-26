@@ -5,44 +5,9 @@
 
     End Sub
 
-    Private Sub FillByNameToolStripButton_Click(sender As Object, e As EventArgs) Handles FillByNameToolStripButton.Click
+    Private Sub FillBycodeToolStripButton_Click(sender As Object, e As EventArgs) Handles FillBycodeToolStripButton.Click
         Try
-            Me.Vw_BLRTableAdapter.FillByName(Me.Project_jobDataSet.vw_BLR, FilternameToolStripTextBox.Text)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) 
-
-
-
-    End Sub
-
-    Private Sub FillByNULLToolStripButton_Click(sender As Object, e As EventArgs)
-        Try
-            Me.Vw_BLRTableAdapter.FillByNULL(Me.Project_jobDataSet.vw_BLR)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-    Private Sub FillByNToolStripButton_Click(sender As Object, e As EventArgs)
-        Try
-            Me.Vw_BLRTableAdapter.FillByN(Me.Project_jobDataSet.vw_BLR)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-
-
-    Private Sub FillByn2ToolStripButton_Click(sender As Object, e As EventArgs) Handles FillByn2ToolStripButton.Click
-        Try
-            Me.Vw_BLRTableAdapter.FillByn2(Me.Project_jobDataSet.vw_BLR)
+            Me.Vw_BLRTableAdapter.FillBycode(Me.Project_jobDataSet.vw_BLR, CType(FilterToolStripTextBox.Text, Integer))
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try

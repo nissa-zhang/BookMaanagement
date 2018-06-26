@@ -45,7 +45,7 @@ Partial Public Class project_jobDataSet
     
     Private tablevw_BLR As vw_BLRDataTable
     
-    Private tabletbl_reminder As tbl_reminderDataTable
+    Private tabletbl_remind As tbl_remindDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -106,8 +106,8 @@ Partial Public Class project_jobDataSet
             If (Not (ds.Tables("vw_BLR")) Is Nothing) Then
                 MyBase.Tables.Add(New vw_BLRDataTable(ds.Tables("vw_BLR")))
             End If
-            If (Not (ds.Tables("tbl_reminder")) Is Nothing) Then
-                MyBase.Tables.Add(New tbl_reminderDataTable(ds.Tables("tbl_reminder")))
+            If (Not (ds.Tables("tbl_remind")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_remindDataTable(ds.Tables("tbl_remind")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -230,9 +230,9 @@ Partial Public Class project_jobDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property tbl_reminder() As tbl_reminderDataTable
+    Public ReadOnly Property tbl_remind() As tbl_remindDataTable
         Get
-            Return Me.tabletbl_reminder
+            Return Me.tabletbl_remind
         End Get
     End Property
     
@@ -333,8 +333,8 @@ Partial Public Class project_jobDataSet
             If (Not (ds.Tables("vw_BLR")) Is Nothing) Then
                 MyBase.Tables.Add(New vw_BLRDataTable(ds.Tables("vw_BLR")))
             End If
-            If (Not (ds.Tables("tbl_reminder")) Is Nothing) Then
-                MyBase.Tables.Add(New tbl_reminderDataTable(ds.Tables("tbl_reminder")))
+            If (Not (ds.Tables("tbl_remind")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_remindDataTable(ds.Tables("tbl_remind")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -428,10 +428,10 @@ Partial Public Class project_jobDataSet
                 Me.tablevw_BLR.InitVars
             End If
         End If
-        Me.tabletbl_reminder = CType(MyBase.Tables("tbl_reminder"),tbl_reminderDataTable)
+        Me.tabletbl_remind = CType(MyBase.Tables("tbl_remind"),tbl_remindDataTable)
         If (initTable = true) Then
-            If (Not (Me.tabletbl_reminder) Is Nothing) Then
-                Me.tabletbl_reminder.InitVars
+            If (Not (Me.tabletbl_remind) Is Nothing) Then
+                Me.tabletbl_remind.InitVars
             End If
         End If
     End Sub
@@ -464,8 +464,8 @@ Partial Public Class project_jobDataSet
         MyBase.Tables.Add(Me.tabletbl_category)
         Me.tablevw_BLR = New vw_BLRDataTable()
         MyBase.Tables.Add(Me.tablevw_BLR)
-        Me.tabletbl_reminder = New tbl_reminderDataTable()
-        MyBase.Tables.Add(Me.tabletbl_reminder)
+        Me.tabletbl_remind = New tbl_remindDataTable()
+        MyBase.Tables.Add(Me.tabletbl_remind)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -530,7 +530,7 @@ Partial Public Class project_jobDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Private Function ShouldSerializetbl_reminder() As Boolean
+    Private Function ShouldSerializetbl_remind() As Boolean
         Return false
     End Function
     
@@ -623,7 +623,7 @@ Partial Public Class project_jobDataSet
     Public Delegate Sub vw_BLRRowChangeEventHandler(ByVal sender As Object, ByVal e As vw_BLRRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Public Delegate Sub tbl_reminderRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_reminderRowChangeEvent)
+    Public Delegate Sub tbl_remindRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_remindRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -3688,12 +3688,6 @@ Partial Public Class project_jobDataSet
         
         Private columnstaff_name As Global.System.Data.DataColumn
         
-        Private columnstaff_kana As Global.System.Data.DataColumn
-        
-        Private columnstaff_sex As Global.System.Data.DataColumn
-        
-        Private columnstaff_section As Global.System.Data.DataColumn
-        
         Private columnemail As Global.System.Data.DataColumn
         
         Private columnext_phone As Global.System.Data.DataColumn
@@ -3793,30 +3787,6 @@ Partial Public Class project_jobDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property staff_kanaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnstaff_kana
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property staff_sexColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnstaff_sex
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property staff_sectionColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnstaff_section
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property emailColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnemail
@@ -3876,9 +3846,9 @@ Partial Public Class project_jobDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function Addvw_BLRRow(ByVal id As Integer, ByVal book_id As Integer, ByVal staff_code As Integer, ByVal start_date As Date, ByVal return_date As Date, ByVal title As String, ByVal staff_name As String, ByVal staff_kana As String, ByVal staff_sex As Byte, ByVal staff_section As String, ByVal email As String, ByVal ext_phone As String, ByVal reminder_flag As Boolean) As vw_BLRRow
+        Public Overloads Function Addvw_BLRRow(ByVal id As Integer, ByVal book_id As Integer, ByVal staff_code As Integer, ByVal start_date As Date, ByVal return_date As Date, ByVal title As String, ByVal staff_name As String, ByVal email As String, ByVal ext_phone As String, ByVal reminder_flag As Boolean) As vw_BLRRow
             Dim rowvw_BLRRow As vw_BLRRow = CType(Me.NewRow,vw_BLRRow)
-            Dim columnValuesArray() As Object = New Object() {id, book_id, staff_code, start_date, return_date, title, staff_name, staff_kana, staff_sex, staff_section, email, ext_phone, reminder_flag}
+            Dim columnValuesArray() As Object = New Object() {id, book_id, staff_code, start_date, return_date, title, staff_name, email, ext_phone, reminder_flag}
             rowvw_BLRRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowvw_BLRRow)
             Return rowvw_BLRRow
@@ -3914,9 +3884,6 @@ Partial Public Class project_jobDataSet
             Me.columnreturn_date = MyBase.Columns("return_date")
             Me.columntitle = MyBase.Columns("title")
             Me.columnstaff_name = MyBase.Columns("staff_name")
-            Me.columnstaff_kana = MyBase.Columns("staff_kana")
-            Me.columnstaff_sex = MyBase.Columns("staff_sex")
-            Me.columnstaff_section = MyBase.Columns("staff_section")
             Me.columnemail = MyBase.Columns("email")
             Me.columnext_phone = MyBase.Columns("ext_phone")
             Me.columnreminder_flag = MyBase.Columns("reminder_flag")
@@ -3939,12 +3906,6 @@ Partial Public Class project_jobDataSet
             MyBase.Columns.Add(Me.columntitle)
             Me.columnstaff_name = New Global.System.Data.DataColumn("staff_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstaff_name)
-            Me.columnstaff_kana = New Global.System.Data.DataColumn("staff_kana", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnstaff_kana)
-            Me.columnstaff_sex = New Global.System.Data.DataColumn("staff_sex", GetType(Byte), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnstaff_sex)
-            Me.columnstaff_section = New Global.System.Data.DataColumn("staff_section", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnstaff_section)
             Me.columnemail = New Global.System.Data.DataColumn("email", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnemail)
             Me.columnext_phone = New Global.System.Data.DataColumn("ext_phone", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3959,8 +3920,6 @@ Partial Public Class project_jobDataSet
             Me.columnstart_date.AllowDBNull = false
             Me.columntitle.MaxLength = 100
             Me.columnstaff_name.MaxLength = 20
-            Me.columnstaff_kana.MaxLength = 20
-            Me.columnstaff_section.MaxLength = 4
             Me.columnemail.MaxLength = 50
             Me.columnext_phone.MaxLength = 10
         End Sub
@@ -4097,8 +4056,8 @@ Partial Public Class project_jobDataSet
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class tbl_reminderDataTable
-        Inherits Global.System.Data.TypedTableBase(Of tbl_reminderRow)
+    Partial Public Class tbl_remindDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_remindRow)
         
         Private columnstaff_code As Global.System.Data.DataColumn
         
@@ -4108,7 +4067,7 @@ Partial Public Class project_jobDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "tbl_reminder"
+            Me.TableName = "tbl_remind"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -4166,50 +4125,50 @@ Partial Public Class project_jobDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_reminderRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_remindRow
             Get
-                Return CType(Me.Rows(index),tbl_reminderRow)
+                Return CType(Me.Rows(index),tbl_remindRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event tbl_reminderRowChanging As tbl_reminderRowChangeEventHandler
+        Public Event tbl_remindRowChanging As tbl_remindRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event tbl_reminderRowChanged As tbl_reminderRowChangeEventHandler
+        Public Event tbl_remindRowChanged As tbl_remindRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event tbl_reminderRowDeleting As tbl_reminderRowChangeEventHandler
+        Public Event tbl_remindRowDeleting As tbl_remindRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event tbl_reminderRowDeleted As tbl_reminderRowChangeEventHandler
+        Public Event tbl_remindRowDeleted As tbl_remindRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Sub Addtbl_reminderRow(ByVal row As tbl_reminderRow)
+        Public Overloads Sub Addtbl_remindRow(ByVal row As tbl_remindRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function Addtbl_reminderRow(ByVal staff_code As String, ByVal reminder_flag As Boolean) As tbl_reminderRow
-            Dim rowtbl_reminderRow As tbl_reminderRow = CType(Me.NewRow,tbl_reminderRow)
+        Public Overloads Function Addtbl_remindRow(ByVal staff_code As String, ByVal reminder_flag As Boolean) As tbl_remindRow
+            Dim rowtbl_remindRow As tbl_remindRow = CType(Me.NewRow,tbl_remindRow)
             Dim columnValuesArray() As Object = New Object() {staff_code, reminder_flag}
-            rowtbl_reminderRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowtbl_reminderRow)
-            Return rowtbl_reminderRow
+            rowtbl_remindRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_remindRow)
+            Return rowtbl_remindRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindBystaff_code(ByVal staff_code As String) As tbl_reminderRow
-            Return CType(Me.Rows.Find(New Object() {staff_code}),tbl_reminderRow)
+        Public Function FindBystaff_code(ByVal staff_code As String) As tbl_remindRow
+            Return CType(Me.Rows.Find(New Object() {staff_code}),tbl_remindRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As tbl_reminderDataTable = CType(MyBase.Clone,tbl_reminderDataTable)
+            Dim cln As tbl_remindDataTable = CType(MyBase.Clone,tbl_remindDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -4217,7 +4176,7 @@ Partial Public Class project_jobDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New tbl_reminderDataTable()
+            Return New tbl_remindDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4238,33 +4197,32 @@ Partial Public Class project_jobDataSet
             Me.columnstaff_code.AllowDBNull = false
             Me.columnstaff_code.Unique = true
             Me.columnstaff_code.MaxLength = 6
-            Me.columnreminder_flag.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Newtbl_reminderRow() As tbl_reminderRow
-            Return CType(Me.NewRow,tbl_reminderRow)
+        Public Function Newtbl_remindRow() As tbl_remindRow
+            Return CType(Me.NewRow,tbl_remindRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New tbl_reminderRow(builder)
+            Return New tbl_remindRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(tbl_reminderRow)
+            Return GetType(tbl_remindRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.tbl_reminderRowChangedEvent) Is Nothing) Then
-                RaiseEvent tbl_reminderRowChanged(Me, New tbl_reminderRowChangeEvent(CType(e.Row,tbl_reminderRow), e.Action))
+            If (Not (Me.tbl_remindRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_remindRowChanged(Me, New tbl_remindRowChangeEvent(CType(e.Row,tbl_remindRow), e.Action))
             End If
         End Sub
         
@@ -4272,8 +4230,8 @@ Partial Public Class project_jobDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.tbl_reminderRowChangingEvent) Is Nothing) Then
-                RaiseEvent tbl_reminderRowChanging(Me, New tbl_reminderRowChangeEvent(CType(e.Row,tbl_reminderRow), e.Action))
+            If (Not (Me.tbl_remindRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_remindRowChanging(Me, New tbl_remindRowChangeEvent(CType(e.Row,tbl_remindRow), e.Action))
             End If
         End Sub
         
@@ -4281,8 +4239,8 @@ Partial Public Class project_jobDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.tbl_reminderRowDeletedEvent) Is Nothing) Then
-                RaiseEvent tbl_reminderRowDeleted(Me, New tbl_reminderRowChangeEvent(CType(e.Row,tbl_reminderRow), e.Action))
+            If (Not (Me.tbl_remindRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_remindRowDeleted(Me, New tbl_remindRowChangeEvent(CType(e.Row,tbl_remindRow), e.Action))
             End If
         End Sub
         
@@ -4290,14 +4248,14 @@ Partial Public Class project_jobDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.tbl_reminderRowDeletingEvent) Is Nothing) Then
-                RaiseEvent tbl_reminderRowDeleting(Me, New tbl_reminderRowChangeEvent(CType(e.Row,tbl_reminderRow), e.Action))
+            If (Not (Me.tbl_remindRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_remindRowDeleting(Me, New tbl_remindRowChangeEvent(CType(e.Row,tbl_remindRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Removetbl_reminderRow(ByVal row As tbl_reminderRow)
+        Public Sub Removetbl_remindRow(ByVal row As tbl_remindRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -4324,7 +4282,7 @@ Partial Public Class project_jobDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "tbl_reminderDataTable"
+            attribute2.FixedValue = "tbl_remindDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -5597,51 +5555,6 @@ Partial Public Class project_jobDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property staff_kana() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_BLR.staff_kanaColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("テーブル 'vw_BLR' にある列 'staff_kana' の値は DBNull です。", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_BLR.staff_kanaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property staff_sex() As Byte
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_BLR.staff_sexColumn),Byte)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("テーブル 'vw_BLR' にある列 'staff_sex' の値は DBNull です。", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_BLR.staff_sexColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property staff_section() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_BLR.staff_sectionColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("テーブル 'vw_BLR' にある列 'staff_section' の値は DBNull です。", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_BLR.staff_sectionColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property email() As String
             Get
                 Try 
@@ -5723,42 +5636,6 @@ Partial Public Class project_jobDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Isstaff_kanaNull() As Boolean
-            Return Me.IsNull(Me.tablevw_BLR.staff_kanaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Setstaff_kanaNull()
-            Me(Me.tablevw_BLR.staff_kanaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Isstaff_sexNull() As Boolean
-            Return Me.IsNull(Me.tablevw_BLR.staff_sexColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Setstaff_sexNull()
-            Me(Me.tablevw_BLR.staff_sexColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Isstaff_sectionNull() As Boolean
-            Return Me.IsNull(Me.tablevw_BLR.staff_sectionColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Setstaff_sectionNull()
-            Me(Me.tablevw_BLR.staff_sectionColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsemailNull() As Boolean
             Return Me.IsNull(Me.tablevw_BLR.emailColumn)
         End Function
@@ -5797,26 +5674,26 @@ Partial Public Class project_jobDataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class tbl_reminderRow
+    Partial Public Class tbl_remindRow
         Inherits Global.System.Data.DataRow
         
-        Private tabletbl_reminder As tbl_reminderDataTable
+        Private tabletbl_remind As tbl_remindDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tabletbl_reminder = CType(Me.Table,tbl_reminderDataTable)
+            Me.tabletbl_remind = CType(Me.Table,tbl_remindDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property staff_code() As String
             Get
-                Return CType(Me(Me.tabletbl_reminder.staff_codeColumn),String)
+                Return CType(Me(Me.tabletbl_remind.staff_codeColumn),String)
             End Get
             Set
-                Me(Me.tabletbl_reminder.staff_codeColumn) = value
+                Me(Me.tabletbl_remind.staff_codeColumn) = value
             End Set
         End Property
         
@@ -5824,12 +5701,28 @@ Partial Public Class project_jobDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property reminder_flag() As Boolean
             Get
-                Return CType(Me(Me.tabletbl_reminder.reminder_flagColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tabletbl_remind.reminder_flagColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("テーブル 'tbl_remind' にある列 'reminder_flag' の値は DBNull です。", e)
+                End Try
             End Get
             Set
-                Me(Me.tabletbl_reminder.reminder_flagColumn) = value
+                Me(Me.tabletbl_remind.reminder_flagColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Isreminder_flagNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_remind.reminder_flagColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Setreminder_flagNull()
+            Me(Me.tabletbl_remind.reminder_flagColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -6196,16 +6089,16 @@ Partial Public Class project_jobDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Public Class tbl_reminderRowChangeEvent
+    Public Class tbl_remindRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As tbl_reminderRow
+        Private eventRow As tbl_remindRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub New(ByVal row As tbl_reminderRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As tbl_remindRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -6213,7 +6106,7 @@ Partial Public Class project_jobDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property Row() As tbl_reminderRow
+        Public ReadOnly Property Row() As tbl_remindRow
             Get
                 Return Me.eventRow
             End Get
@@ -10324,9 +10217,6 @@ Namespace project_jobDataSetTableAdapters
             tableMapping.ColumnMappings.Add("return_date", "return_date")
             tableMapping.ColumnMappings.Add("title", "title")
             tableMapping.ColumnMappings.Add("staff_name", "staff_name")
-            tableMapping.ColumnMappings.Add("staff_kana", "staff_kana")
-            tableMapping.ColumnMappings.Add("staff_sex", "staff_sex")
-            tableMapping.ColumnMappings.Add("staff_section", "staff_section")
             tableMapping.ColumnMappings.Add("email", "email")
             tableMapping.ColumnMappings.Add("ext_phone", "ext_phone")
             tableMapping.ColumnMappings.Add("reminder_flag", "reminder_flag")
@@ -10343,50 +10233,55 @@ Namespace project_jobDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(6) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(8) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email"& _ 
-                ", ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR"
+                ", ext_phone, reminder_flag FROM vw_BLR"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email"& _ 
-                ", ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHE"& _ 
-                "RE (return_date = NULL)"
+                ", ext_phone, reminder_flag FROM vw_BLR WHERE staff_code like @filter"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@filter", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "staff_code", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email"& _ 
-                ", ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHE"& _ 
-                "RE (return_date LIKE @filtername)"
+                ", ext_phone, reminder_flag FROM vw_BLR WHERE (return_date = NULL)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@filtername", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "return_date", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email"& _ 
-                ", ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHE"& _ 
-                "RE (return_date IS NULL)"
+                ", ext_phone, reminder_flag FROM vw_BLR WHERE (return_date LIKE @filtername)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@filtername", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "return_date", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
             Me._commandCollection(4).CommandText = "SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email"& _ 
-                ", ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHE"& _ 
-                "RE (staff_name LIKE @filtername)"
+                ", ext_phone, reminder_flag FROM vw_BLR WHERE (return_date IS NULL)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@filtername", Global.System.Data.SqlDbType.NVarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "staff_name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(5).Connection = Me.Connection
             Me._commandCollection(5).CommandText = "SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email"& _ 
-                ", ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHE"& _ 
-                "RE (return_date IS NULL)"
+                ", ext_phone, reminder_flag FROM vw_BLR WHERE (staff_name LIKE @filtername)"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@filtername", Global.System.Data.SqlDbType.NVarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "staff_name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(6) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(6).Connection = Me.Connection
             Me._commandCollection(6).CommandText = "SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email"& _ 
-                ", ext_phone, reminder_flag, staff_kana, staff_section, staff_sex FROM vw_BLR WHE"& _ 
-                "RE return_date is null"
+                ", ext_phone, reminder_flag FROM vw_BLR WHERE (return_date IS NULL)"
             Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(7) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(7).Connection = Me.Connection
+            Me._commandCollection(7).CommandText = "SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email"& _ 
+                ", ext_phone, reminder_flag FROM vw_BLR WHERE return_date is NULL"
+            Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(8) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(8).Connection = Me.Connection
+            Me._commandCollection(8).CommandText = "SELECT id, book_id, staff_code, start_date, return_date, title, staff_name, email"& _ 
+                ", ext_phone, reminder_flag FROM vw_BLR WHERE (return_date IS NULL)"
+            Me._commandCollection(8).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10417,8 +10312,22 @@ Namespace project_jobDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByN(ByVal dataTable As project_jobDataSet.vw_BLRDataTable) As Integer
+        Public Overloads Overridable Function FillBycode(ByVal dataTable As project_jobDataSet.vw_BLRDataTable, ByVal filter As Integer) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(filter,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByN(ByVal dataTable As project_jobDataSet.vw_BLRDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -10431,7 +10340,7 @@ Namespace project_jobDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function FillByN1(ByVal dataTable As project_jobDataSet.vw_BLRDataTable, ByVal filtername As Global.System.Nullable(Of Date)) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (filtername.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(filtername.Value,Date)
             Else
@@ -10449,7 +10358,7 @@ Namespace project_jobDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function FillByn2(ByVal dataTable As project_jobDataSet.vw_BLRDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -10462,7 +10371,7 @@ Namespace project_jobDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function FillByName(ByVal dataTable As project_jobDataSet.vw_BLRDataTable, ByVal filtername As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(4)
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
             If (filtername Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -10480,7 +10389,20 @@ Namespace project_jobDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function FillByNULL(ByVal dataTable As project_jobDataSet.vw_BLRDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(5)
+            Me.Adapter.SelectCommand = Me.CommandCollection(6)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByNULL1(ByVal dataTable As project_jobDataSet.vw_BLRDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(7)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -10493,7 +10415,7 @@ Namespace project_jobDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function Fillnore(ByVal dataTable As project_jobDataSet.vw_BLRDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(6)
+            Me.Adapter.SelectCommand = Me.CommandCollection(8)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -10511,7 +10433,7 @@ Namespace project_jobDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class tbl_reminderTableAdapter
+    Partial Public Class tbl_remindTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
@@ -10628,35 +10550,39 @@ Namespace project_jobDataSetTableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "tbl_reminder"
+            tableMapping.DataSetTable = "tbl_remind"
             tableMapping.ColumnMappings.Add("staff_code", "staff_code")
             tableMapping.ColumnMappings.Add("reminder_flag", "reminder_flag")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_reminder] WHERE (([staff_code] = @Original_staff_code) AND"& _ 
-                " ([reminder_flag] = @Original_reminder_flag))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_remind] WHERE (([staff_code] = @Original_staff_code) AND ("& _ 
+                "(@IsNull_reminder_flag = 1 AND [reminder_flag] IS NULL) OR ([reminder_flag] = @O"& _ 
+                "riginal_reminder_flag)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_staff_code", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "staff_code", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_reminder_flag", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "reminder_flag", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_reminder_flag", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "reminder_flag", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_reminder] ([staff_code], [reminder_flag]) VALUES (@staff_c"& _ 
-                "ode, @reminder_flag);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT staff_code, reminder_flag FROM tbl_reminder WHERE "& _ 
-                "(staff_code = @staff_code)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_remind] ([staff_code], [reminder_flag]) VALUES (@staff_cod"& _ 
+                "e, @reminder_flag);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT staff_code, reminder_flag FROM tbl_remind WHERE (sta"& _ 
+                "ff_code = @staff_code)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@staff_code", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "staff_code", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@reminder_flag", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "reminder_flag", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_reminder] SET [staff_code] = @staff_code, [reminder_flag] = @re"& _ 
-                "minder_flag WHERE (([staff_code] = @Original_staff_code) AND ([reminder_flag] = "& _ 
-                "@Original_reminder_flag));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT staff_code, reminder_flag FROM tbl_reminder W"& _ 
-                "HERE (staff_code = @staff_code)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_remind] SET [staff_code] = @staff_code, [reminder_flag] = @remi"& _ 
+                "nder_flag WHERE (([staff_code] = @Original_staff_code) AND ((@IsNull_reminder_fl"& _ 
+                "ag = 1 AND [reminder_flag] IS NULL) OR ([reminder_flag] = @Original_reminder_fla"& _ 
+                "g)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT staff_code, reminder_flag FROM tbl_remind WHERE (staff_code = @sta"& _ 
+                "ff_code)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@staff_code", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "staff_code", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@reminder_flag", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "reminder_flag", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_staff_code", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "staff_code", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_reminder_flag", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "reminder_flag", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_reminder_flag", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "reminder_flag", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
@@ -10673,7 +10599,7 @@ Namespace project_jobDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT staff_code, reminder_flag FROM dbo.tbl_reminder"
+            Me._commandCollection(0).CommandText = "SELECT staff_code, reminder_flag FROM dbo.tbl_remind"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10681,7 +10607,7 @@ Namespace project_jobDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As project_jobDataSet.tbl_reminderDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As project_jobDataSet.tbl_remindDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -10694,9 +10620,9 @@ Namespace project_jobDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As project_jobDataSet.tbl_reminderDataTable
+        Public Overloads Overridable Function GetData() As project_jobDataSet.tbl_remindDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As project_jobDataSet.tbl_reminderDataTable = New project_jobDataSet.tbl_reminderDataTable()
+            Dim dataTable As project_jobDataSet.tbl_remindDataTable = New project_jobDataSet.tbl_remindDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -10704,7 +10630,7 @@ Namespace project_jobDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As project_jobDataSet.tbl_reminderDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As project_jobDataSet.tbl_remindDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -10712,7 +10638,7 @@ Namespace project_jobDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As project_jobDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "tbl_reminder")
+            Return Me.Adapter.Update(dataSet, "tbl_remind")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10733,13 +10659,19 @@ Namespace project_jobDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_staff_code As String, ByVal Original_reminder_flag As Boolean) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_staff_code As String, ByVal Original_reminder_flag As Global.System.Nullable(Of Boolean)) As Integer
             If (Original_staff_code Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_staff_code")
             Else
                 Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_staff_code,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_reminder_flag,Boolean)
+            If (Original_reminder_flag.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_reminder_flag.Value,Boolean)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10759,13 +10691,17 @@ Namespace project_jobDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal staff_code As String, ByVal reminder_flag As Boolean) As Integer
+        Public Overloads Overridable Function Insert(ByVal staff_code As String, ByVal reminder_flag As Global.System.Nullable(Of Boolean)) As Integer
             If (staff_code Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("staff_code")
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(staff_code,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(1).Value = CType(reminder_flag,Boolean)
+            If (reminder_flag.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(reminder_flag.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10785,19 +10721,29 @@ Namespace project_jobDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal staff_code As String, ByVal reminder_flag As Boolean, ByVal Original_staff_code As String, ByVal Original_reminder_flag As Boolean) As Integer
+        Public Overloads Overridable Function Update(ByVal staff_code As String, ByVal reminder_flag As Global.System.Nullable(Of Boolean), ByVal Original_staff_code As String, ByVal Original_reminder_flag As Global.System.Nullable(Of Boolean)) As Integer
             If (staff_code Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("staff_code")
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(staff_code,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(reminder_flag,Boolean)
+            If (reminder_flag.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(reminder_flag.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
             If (Original_staff_code Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_staff_code")
             Else
                 Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Original_staff_code,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_reminder_flag,Boolean)
+            If (Original_reminder_flag.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_reminder_flag.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10817,7 +10763,7 @@ Namespace project_jobDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal reminder_flag As Boolean, ByVal Original_staff_code As String, ByVal Original_reminder_flag As Boolean) As Integer
+        Public Overloads Overridable Function Update(ByVal reminder_flag As Global.System.Nullable(Of Boolean), ByVal Original_staff_code As String, ByVal Original_reminder_flag As Global.System.Nullable(Of Boolean)) As Integer
             Return Me.Update(Original_staff_code, reminder_flag, Original_staff_code, Original_reminder_flag)
         End Function
     End Class
@@ -10851,7 +10797,7 @@ Namespace project_jobDataSetTableAdapters
         
         Private _tbl_categoryTableAdapter As tbl_categoryTableAdapter
         
-        Private _tbl_reminderTableAdapter As tbl_reminderTableAdapter
+        Private _tbl_remindTableAdapter As tbl_remindTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -10985,12 +10931,12 @@ Namespace project_jobDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property tbl_reminderTableAdapter() As tbl_reminderTableAdapter
+        Public Property tbl_remindTableAdapter() As tbl_remindTableAdapter
             Get
-                Return Me._tbl_reminderTableAdapter
+                Return Me._tbl_remindTableAdapter
             End Get
             Set
-                Me._tbl_reminderTableAdapter = value
+                Me._tbl_remindTableAdapter = value
             End Set
         End Property
         
@@ -11045,9 +10991,9 @@ Namespace project_jobDataSetTableAdapters
                             AndAlso (Not (Me._tbl_categoryTableAdapter.Connection) Is Nothing)) Then
                     Return Me._tbl_categoryTableAdapter.Connection
                 End If
-                If ((Not (Me._tbl_reminderTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._tbl_reminderTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._tbl_reminderTableAdapter.Connection
+                If ((Not (Me._tbl_remindTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._tbl_remindTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._tbl_remindTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -11086,7 +11032,7 @@ Namespace project_jobDataSetTableAdapters
                 If (Not (Me._tbl_categoryTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._tbl_reminderTableAdapter) Is Nothing) Then
+                If (Not (Me._tbl_remindTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -11172,12 +11118,12 @@ Namespace project_jobDataSetTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._tbl_reminderTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbl_reminder.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._tbl_remindTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbl_remind.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._tbl_reminderTableAdapter.Update(updatedRows))
+                    result = (result + Me._tbl_remindTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -11255,11 +11201,11 @@ Namespace project_jobDataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._tbl_reminderTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbl_reminder.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._tbl_remindTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbl_remind.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._tbl_reminderTableAdapter.Update(addedRows))
+                    result = (result + Me._tbl_remindTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -11273,11 +11219,11 @@ Namespace project_jobDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As project_jobDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._tbl_reminderTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbl_reminder.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._tbl_remindTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbl_remind.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._tbl_reminderTableAdapter.Update(deletedRows))
+                    result = (result + Me._tbl_remindTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -11418,8 +11364,8 @@ Namespace project_jobDataSetTableAdapters
                         AndAlso (Me.MatchTableAdapterConnection(Me._tbl_categoryTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。")
             End If
-            If ((Not (Me._tbl_reminderTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._tbl_reminderTableAdapter.Connection) = false)) Then
+            If ((Not (Me._tbl_remindTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._tbl_remindTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。")
             End If
             Dim workConnection As Global.System.Data.IDbConnection = Me.Connection
@@ -11525,13 +11471,13 @@ Namespace project_jobDataSetTableAdapters
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._tbl_categoryTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._tbl_reminderTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._tbl_reminderTableAdapter, Me._tbl_reminderTableAdapter.Connection)
-                    Me._tbl_reminderTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._tbl_reminderTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._tbl_reminderTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._tbl_reminderTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbl_reminderTableAdapter.Adapter)
+                If (Not (Me._tbl_remindTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._tbl_remindTableAdapter, Me._tbl_remindTableAdapter.Connection)
+                    Me._tbl_remindTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbl_remindTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._tbl_remindTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._tbl_remindTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbl_remindTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -11626,9 +11572,9 @@ Namespace project_jobDataSetTableAdapters
                     Me._tbl_categoryTableAdapter.Connection = CType(revertConnections(Me._tbl_categoryTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._tbl_categoryTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._tbl_reminderTableAdapter) Is Nothing) Then
-                    Me._tbl_reminderTableAdapter.Connection = CType(revertConnections(Me._tbl_reminderTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._tbl_reminderTableAdapter.Transaction = Nothing
+                If (Not (Me._tbl_remindTableAdapter) Is Nothing) Then
+                    Me._tbl_remindTableAdapter.Connection = CType(revertConnections(Me._tbl_remindTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbl_remindTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

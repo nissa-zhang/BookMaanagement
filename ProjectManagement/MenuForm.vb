@@ -1,17 +1,6 @@
 ﻿Public Class MenuForm
 
-    Dim frm_st As StaffForm
-    Private Sub StaffButton_Click(sender As Object, e As EventArgs)
-        Me.Cursor = Cursors.WaitCursor
 
-        If frm_st Is Nothing OrElse frm_st.IsDisposed() Then
-            frm_st = New StaffForm()
-        End If
-
-        frm_st.ShowDialog()
-
-        Me.Cursor = Cursors.Default
-    End Sub
 
 
     Private Sub MenuForm_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -105,13 +94,13 @@
         Me.Cursor = Cursors.Default
     End Sub
 
-    Dim frm_bre As BookReminder
+    Dim frm_bre As Reminder
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
         Me.Cursor = Cursors.WaitCursor
 
         If frm_bre Is Nothing OrElse frm_bre.IsDisposed() Then
-            frm_bre = New BookReminder()
+            frm_bre = New Reminder()
         End If
 
         frm_bre.ShowDialog()
@@ -147,5 +136,17 @@
 
     Private Sub QuitButton_Click_1(sender As Object, e As EventArgs) Handles QuitButton.Click
 
+    End Sub
+    Dim frm_st As StaffForm
+    Private Sub StaffButton_Click_1(sender As Object, e As EventArgs) Handles StaffButton.Click
+        Me.Cursor = Cursors.WaitCursor
+
+        If frm_st Is Nothing OrElse frm_st.IsDisposed() Then
+            frm_st = New StaffForm()
+        End If
+
+        frm_st.ShowDialog()
+
+        Me.Cursor = Cursors.Default
     End Sub
 End Class
